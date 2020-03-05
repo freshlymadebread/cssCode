@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            height:600px;
+            text-align: center;
+            margin: 100px;
+        }
+        #onShowRectangleInfo{
+            position: absolute;
+            display: none;
+            top:2.5em;
+            transform:translate(-50%,0px) translate(-7px,0px);
+            z-index: 9999;
+            background-color: #3c4958;
+            color:#fff;
+            border-radius: 5px;
+            padding :4px 10px;
+            word-break:break-all;
+            max-width:400px;
+            min-width:300px;
+        }
+        #onShowRectangleInfo span{
+            font-size: 1em;
+        }
+        .onShowInfo{
+            position: relative;
+            padding:5px;
+            font-size: 0.7em;
+        }
+        .onShowInfo:hover #onShowRectangleInfo{
+            display: inline-block;
+        }
+        .onShowTriangle{
+            z-index: -1;
+            position: absolute;
+            left:50%;
+            display: inline-block;
+            width:15px;
+            height:15px;
+            transform: translate(-50%,-40%) rotate(45deg);
+            background-color: #3c4958;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="onShowInfo">123
+            <div id = "onShowRectangleInfo">
+                <span>功能点系统某个需要测试的功能流程</span>
+                <div class="onShowTriangle"></div>
+            </div>
+        </i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>flex</title>
+
+<style>
+html body{
+    transition: all 1s;
+    height: 100%
+}
+#container{
+    font-size: 14px;
+    margin:50px;
+    display: flex;
+}
+.ib{
+    flex-grow:1;
+}
+.ib ul{
+    display: flex;
+    margin: 5px 0px;
+    padding:0;
+    background-color: #53a6dd;;
+}
+.ib li{
+    text-align:center;
+    flex-grow:1;
+    display: inline-block
+}
+.ib1{
+    position: relative;
+    transition: all 1s;
+    width: 100px;
+    height: 100%;
+    background-color: #00b8f5;
+    float: left;
+    line-height: 29px;
+    text-align: center;
+}/* 
+.ib:after {
+    float:right;
+    content: "1";
+        position: absolute; 
+    top: -1px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 11;
+    background-color: #1f1717;
+    border-radius: 0 5px 0 50px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    box-sizing: content-box;
+} */
+.flash{
+    margin:auto;
+    margin:0px 100px 0px  100px ;
+    display: none;
+}
+</style>
+</head>
+<body>
+<div id ="container">
+    <div class="ib  it0" onclick="doit(0)">
+        <div class="ib1" >
+            被测系统管理
+        </div>
+        <div class="flash">
+            <ul>
+                <li>添加被测系统</li>
+                <li>添加功能点</li>
+                <li>添加UI及元素</li>
+                <li>配置脚本</li>
+            </ul>
+        </div>
+    </div>
+    <div class="ib it1" onclick="doit(1)">
+        <div class="ib1" >
+            脚本生成
+        </div>
+        <div class="flash">
+            <ul>
+                <li>添加测试项目</li>
+                <li>添加用例</li>
+                <li>配置数据</li>
+                <li>配置场景</li>
+            </ul>
+        </div>
+    </div>
+    <div class="ib it2" onclick="doit(2)">
+        <div class="ib1 " >
+            测试执行
+        </div>
+        <div class="flash">
+            <ul>
+                <li>选择测试计划</li>
+                <li>添加待执行场景</li>
+                <li>选择执行机</li>
+                <li>执行</li>
+            </ul>
+        </div>
+    </div>
+    <div class="ib it3" onclick="doit(3)">
+        <div class="ib1 " >
+            结果查询
+        </div>
+        <div class="flash">
+            <ul>
+                    <li>按批次查询</li>
+                    <li>按用例查询</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+    <script>
+        function doit(i){
+            console.log(i)
+            var container = document.getElementById("container")
+            container.childNodes.forEach((v)=>{
+                if(v.nodeName!=="#text"){
+                    v.style.flexGrow = "1"
+                    v.childNodes[3].style.display ="none"
+                }
+            })
+            var ibs = document.getElementsByClassName("it"+i)
+            
+            ibs[0].style.flexGrow = "100"
+            ibs[0].childNodes[3].style.display ="block"
+            
+        }
+        // ibs.array.forEach(element => {
+        //     console.log(element)
+        // });
+        // for(var i = 0;i <ibs.length; i++){
+        //     ibs[i].addEventListener("click",(e)=>{
+        //         console.log(e)
+        // })}
+        // var a = container.addEventListener("click",(e)=>{
+        //     console.log(e)
+        //     container.childNodes.forEach((v)=>{
+        //         if(v.nodeName!=="#text"){
+        //             v.style.flexGrow = "1"
+        //             v.childNodes[3].style.display ="none"
+        //         }
+        //     })
+        //     e.target.style.flexGrow = "100"
+        //     e.target.childNodes[3].style.display ="inline-block"
+        // })
+    </script>
+</body>
+</html>

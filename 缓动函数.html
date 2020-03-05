@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #rotate:hover
+        {
+        background-color:yellow;
+        transform:rotate(40deg);
+        }
+    #rotate {
+        transform:rotate(0deg);
+        position: fixed;
+        top:200px;
+        left: 500px;
+        bottom:200px;
+        right: 500px;
+        transition:all  5s cubic-bezier(.8,1.8,0.7,0.7) 0s;
+        background-color: aqua;
+        cursor: pointer;
+        line-height: 50vw;
+        font-size:50px
+    }
+    </style>
+</head>
+<body>
+    <div id = "rotate"> MF <div>
+</body>
+</html>
