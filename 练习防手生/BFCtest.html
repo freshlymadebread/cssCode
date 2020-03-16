@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC块级作用域</title>
+    <style>
+        .bfcContainer{
+            /* overflow: hidden; */
+            position: absolute;
+            background-color: blue;
+            width: 600px;
+            height: 600px;
+        }
+        .floatItem{
+            margin: auto;
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+
+ 	.father{
+ 		width: 400px;
+ 		height: 400px;
+ 		background: yellow;
+ 		position: relative;
+ 	}
+ 	.son{
+ 		width: 200px;
+ 		height: 100px;
+ 		background: green;
+ 		position: absolute;
+ 		top: 0;
+ 		right: 0;
+ 		bottom: 0;
+ 		left: 0;
+ 		margin: auto;
+         }
+    </style>
+</head>
+<body>
+    <div class='bfcContainer'>
+        <div class='floatItem'>我是浮动的子元素</div>
+    </div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

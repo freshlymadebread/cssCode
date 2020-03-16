@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包裹性的理解</title>
+    <style>
+        .father{
+            text-align: center;
+            background-color: grey;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        }
+        .content{
+            text-align: left;
+            display: inline-block;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class='father'>
+        <div class='content'></div>
+    </div>
+</body>
+<script>
+    var str = [ ...'我先是居中然后左对齐，因为我祖父容器要求我父容器居中，我父容器要求我左对齐----------讨厌!我竟然做不到换行------' ]
+    var a = document.getElementsByClassName('content')[0]
+    var index = -1,
+        len = str.length
+    setInterval(() => {
+        index = ++index % len
+        a.innerHTML += str[ index ]
+    }, 200);
+</script>
+</html>
