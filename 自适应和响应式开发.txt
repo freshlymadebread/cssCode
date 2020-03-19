@@ -1,0 +1,9 @@
+1. 响应式 ： 使用媒体查询 + px完成
+    @media screen and ( max-width : 500px){
+        ul .black{
+            color :black;
+        }
+    }
+2. 自适应开发 ：a. 使用rem （html中font-size的大小）
+               b. flex开发
+               c.使用vh vw
