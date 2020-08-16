@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛客网面试页面布局</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body,html{
+            height : 100%;
+        }
+        .father{
+            height : 100%;
+        }
+        .header{
+            height: 20px;
+            background-color: grey;
+        }
+        .content{
+            height : calc(100% - 20px);
+            display: flex;
+        }
+        .section{
+            flex-grow: 1;
+            background-color: saddlebrown;
+            height :100% ;
+        }
+        .aside{
+            background-color: red;
+            width: 200px;
+            height :100% ;
+        }
+    </style>
+</head>
+<body>
+    <div class='father'>
+        <div class='header'></div>
+        <div class='content'>
+            <div class='section'></div>
+            <div class='aside'></div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+</html>
